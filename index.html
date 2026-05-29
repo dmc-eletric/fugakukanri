@@ -185,7 +185,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
         <a class="slink" id="sl-list" onclick="go('list')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>部材一覧</a>
         <a class="slink" id="sl-history" onclick="go('history')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>操作履歴</a>
         <div class="scat" id="sl-admin-cat" style="display:none;">ADMIN</div>
-        <a class="slink" id="sl-admin" onclick="go('admin')" style="display:none;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>管理設定</a>
+        <a class="slink" id="sl-admin" onclick="go('admin')" style="display:none;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31(2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>管理設定</a>
       </div>
     </nav>
 
@@ -237,13 +237,35 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
         <!-- Step 2: 情報入力 -->
         <div id="add-step2" class="card" style="margin-bottom:14px;">
           <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:12px;">② 情報入力</p>
-          <div class="row2">
-            <div class="fg"><label class="lbl">機種名 *</label><input class="inp" id="f-model" type="text" placeholder="例：MA-9500"/></div>
-            <div class="fg"><label class="lbl">シリアル番号 *</label><input class="inp" id="f-serial" type="text" placeholder="例：SN123456"/></div>
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:10px;">
+            <div class="fg">
+              <label class="lbl">機種名 *</label>
+              <select class="sel" id="f-model">
+                <option value="NPM-WX">NPM-WX</option>
+                <option value="NPM-W2">NPM-W2</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="lbl">機番 *</label>
+              <input class="inp" id="f-unit" type="text" placeholder="例：1234"/>
+            </div>
+            <div class="fg">
+              <label class="lbl">シリアル番号 *</label>
+              <input class="inp" id="f-serial" type="text" placeholder="例：SN123456"/>
+            </div>
           </div>
+
           <div class="fg"><label class="lbl">製品名 *</label><input class="inp" id="f-product" type="text" placeholder="例：基板 A Rev2.1"/></div>
           <div class="fg"><label class="lbl">管理コード（外部）</label><input class="inp" id="f-extcode" type="text" placeholder="既存の管理番号があれば入力"/></div>
-          <div class="fg"><label class="lbl">依頼者</label><input class="inp" id="f-requester" type="text" placeholder="誰から依頼されましたか？"/></div>
+          <div class="fg">
+            <label class="lbl">依頼者</label>
+            <select class="sel" id="f-requester">
+              <option value="">-- 選択してください --</option>
+              <option value="A様">A様</option>
+              <option value="B様">B様</option>
+            </select>
+          </div>
           <div class="fg"><label class="lbl">備考</label><textarea class="inp" id="f-note" rows="2" style="resize:none;" placeholder="補足情報など"></textarea></div>
           <div class="card" style="background:#fef3c7;border-color:#f59e0b;margin-top:4px;">
             <p style="font-size:12px;font-weight:600;color:#92400e;margin-bottom:6px;">自動生成情報</p>
@@ -790,13 +812,15 @@ function initAddPage(){
   document.getElementById("photo-preview").style.display="none";
   document.getElementById("capture-btn").style.display="none";
   document.getElementById("add-step3").style.display="none";
-  ["f-model","f-serial","f-product","f-extcode","f-requester","f-note"].forEach(id=>document.getElementById(id).value="");
+  ["f-unit","f-serial","f-product","f-extcode","f-note"].forEach(id=>document.getElementById(id).value="");
+  document.getElementById("f-model").selectedIndex = 0;
+  document.getElementById("f-requester").selectedIndex = 0;
   document.getElementById("auto-operator").textContent=_userName;
   updateAutoCode();
   setInterval(()=>{ document.getElementById("auto-datetime").textContent=nowJP(); },1000);
 }
 
-document.getElementById("f-model").addEventListener("input",updateAutoCode);
+document.getElementById("f-model").addEventListener("change",updateAutoCode);
 
 async function updateAutoCode(){
   const model=(document.getElementById("f-model").value||"XX").replace(/[^a-zA-Z0-9\-]/g,"").toUpperCase().slice(0,8);
@@ -857,10 +881,11 @@ function handleFileSelect(e){
 }
 
 async function confirmAdd(){
-  const model=document.getElementById("f-model").value.trim();
+  const model=document.getElementById("f-model").value;
+  const unitNo=document.getElementById("f-unit").value.trim();
   const serial=document.getElementById("f-serial").value.trim();
   const product=document.getElementById("f-product").value.trim();
-  if(!model||!serial||!product){ toast("機種名・シリアル番号・製品名は必須です"); return; }
+  if(!model||!unitNo||!serial||!product){ toast("機種名・機番・シリアル番号・製品名は必須です"); return; }
 
   let photoUrl="";
   if(_capturedBlob){
@@ -882,7 +907,10 @@ async function confirmAdd(){
 
   const body={
     internal_code:internalCode,
-    model,serial,product,
+    model,
+    unit_no:unitNo,
+    serial,
+    product,
     ext_code: document.getElementById("f-extcode").value.trim(),
     requester:document.getElementById("f-requester").value.trim(),
     note:document.getElementById("f-note").value.trim(),
@@ -1242,6 +1270,7 @@ function showDetailModal(item){
     {l:"外部コード",  v:item.ext_code||"—"},
     {l:"製品名",      v:item.product},
     {l:"機種名",      v:item.model},
+    {l:"機番",        v:item.unit_no||"—"},
     {l:"シリアル",    v:item.serial},
     {l:"依頼者",      v:item.requester||"—"},
     {l:"操作者",      v:item.operator},
