@@ -185,7 +185,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
         <a class="slink" id="sl-list" onclick="go('list')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>部材一覧</a>
         <a class="slink" id="sl-history" onclick="go('history')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>操作履歴</a>
         <div class="scat" id="sl-admin-cat" style="display:none;">ADMIN</div>
-        <a class="slink" id="sl-admin" onclick="go('admin')" style="display:none;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31(2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>管理設定</a>
+        <a class="slink" id="sl-admin" onclick="go('admin')" style="display:none;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543-.826-3.31-2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>管理設定</a>
       </div>
     </nav>
 
@@ -242,19 +242,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
             <div class="fg">
               <label class="lbl">機種名 *</label>
               <select class="sel" id="f-model">
-                <option value="NPM-WX">NPM-D3A</option>
-                <option value="NPM-W2">NPM-D3</option>
-				<option value="NPM-W2">NPM-DX</option>
-				<option value="NPM-W2">NPM-WX</option>
-				<option value="NPM-W2">NPM-TT</option>
-				<option value="NPM-W2">NPM-TT2</option>
+                <option value="NPM-D3A">NPM-D3A</option>
+                <option value="NPM-D3">NPM-D3</option>
+				<option value="NPM-DX">NPM-DX</option>
+				<option value="NPM-WX">NPM-WX</option>
+				<option value="NPM-TT">NPM-TT</option>
+				<option value="NPM-TT2">NPM-TT2</option>
 				<option value="NPM-W2">NPM-W2</option>
-				<option value="NPM-W2">NPM-WXS</option>
-				<option value="NPM-W2">NPM-VF</option>
-				<option value="NPM-W2">NPM-W</option>
-				<option value="NPM-W2">NPM-GW</option>
-				<option value="NPM-W2">NPM-GH</option>
-				<option value="NPM-W2">手入力</option>
+				<option value="NPM-WXS">NPM-WXS</option>
+				<option value="NPM-VF">NPM-VF</option>
+				<option value="NPM-W">NPM-W</option>
+				<option value="NPM-GW">NPM-GW</option>
+				<option value="NPM-GH">NPM-GH</option>
+				<option value="手入力">手入力</option>
               </select>
             </div>
             <div class="fg">
@@ -273,12 +273,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
             <label class="lbl">依頼者</label>
             <select class="sel" id="f-requester">
               <option value="">-- 選択してください --</option>
-              <option value="A様">谷川様</option>
-              <option value="B様">高田様</option>
-			  <option value="B様">浅沼様</option>
-			  <option value="B様">鈴木様</option>
-			  <option value="B様">佐久間様</option>
-			  <option value="B様">キング様</option>
+              <option value="谷川様">谷川様</option>
+              <option value="高田様">高田様</option>
+			  <option value="浅沼様">浅沼様</option>
+			  <option value="鈴木様">鈴木様</option>
+			  <option value="佐久間様">佐久間様</option>
+			  <option value="キング様">キング様</option>
 			  
             </select>
           </div>
@@ -475,7 +475,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
     <div class="mrow" onclick="go('jig-inspect');closeMore()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>JIG定期点検</div>
     <div class="mrow" id="mn-jig-add-row" onclick="go('jig-add');closeMore()" style="display:none;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>JIG新規追加</div>
     <div class="mrow" onclick="go('history');closeMore()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>操作履歴</div>
-    <div class="mrow" id="mn-admin-row" onclick="go('admin');closeMore()" style="display:none;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31(2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>管理設定</div>
+    <div class="mrow" id="mn-admin-row" onclick="go('admin');closeMore()" style="display:none;"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543-.826-3.31-2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>管理設定</div>
     <div style="padding:8px 20px;border-top:1px solid #f3f4f6;font-size:12px;color:#9ca3af;">
       ログイン中: <span id="mob-user" style="font-weight:600;color:#374151;"></span>
     </div>
@@ -1116,23 +1116,23 @@ async function submitJigAdd(){
 
   const body={ name, qty, desc, photo_url:photoUrl, operator:_userName };
 
-  try{
-    await api("/jigs/",{method:"POST",body:JSON.stringify(body)});
+  try {
+    await api("/jigs", {method:"POST", body:JSON.stringify(body)});
     toast("JIGを新規登録しました: "+name);
     initJigAddPage();
     document.getElementById("cam-jig-add").innerHTML="";
     go("jig-inspect");
-  }catch(e){ toast("JIGの登録に失敗しました: "+e.message); }
+  } catch(e) { toast("JIGの登録に失敗しました: "+e.message); }
 }
 
 /* ─────────────────────────────────────
    JIG PERIODIC INSPECTION
 ───────────────────────────────────── */
 async function loadJigInspectPage(){
-  try{
-    _allJigs=await api("/jigs/");
+  try {
+    _allJigs = await api("/jigs");
     renderJigInspectList(_allJigs);
-  }catch(e){
+  } catch(e) {
     document.getElementById("jig-inspect-content").innerHTML=`<p style="color:#dc2626;font-size:13px;">${e.message}</p>`;
   }
 }
@@ -1151,7 +1151,7 @@ function renderJigInspectList(jigs){
     <div class="item-card" onclick="openJigInspectModal(${JSON.stringify(j).replace(/"/g,"&quot;")})">
       ${j.photo_url
         ? `<img class="item-thumb" src="${esc(j.photo_url)}" alt="" onerror="this.style.display='none'"/>`
-        : `<div class="item-thumb no-img"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg></div>`}
+        : `<div class="item-thumb no-img"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543-.826-3.31-2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg></div>`}
       <div class="item-info">
         <div class="item-name">${esc(j.name)}</div>
         <div class="item-sub">説明: ${esc(j.desc || "—")} | 総数: <strong>${j.qty}</strong></div>
