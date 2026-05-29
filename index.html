@@ -288,59 +288,59 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
         </div>
       </div>
 
-      <!-- ── JIG ADD (Thêm JIG mới) ── -->
+      <!-- ── JIG ADD ── -->
       <div id="page-jig-add" class="page hidden">
-        <h2 class="pg-title">JIG新規追加 (Thêm JIG Mới)</h2>
+        <h2 class="pg-title">JIG新規追加</h2>
         
         <!-- JIG Photo -->
         <div class="card" style="margin-bottom:14px;">
-          <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px;">① JIG写真撮影 (Chụp ảnh JIG)</p>
+          <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:10px;">① JIG写真撮影</p>
           <div class="cam-wrap">
             <div id="cam-jig-add" style="border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;max-width:360px;margin:0 auto;"></div>
             <div class="cam-overlay" id="cam-jig-add-overlay">
               <svg fill="none" stroke="#fff" viewBox="0 0 24 24" style="width:44px;height:44px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-              <span style="color:#fff;font-size:13px;font-weight:600;">撮影完了 (Đã chụp)</span>
+              <span style="color:#fff;font-size:13px;font-weight:600;">撮影完了</span>
             </div>
           </div>
           <div id="jig-add-preview" style="display:none;max-width:360px;margin:10px auto;border-radius:10px;overflow:hidden;border:1px solid #e5e7eb;">
             <img id="jig-add-preview-img" src="" alt="" style="width:100%;display:block;"/>
           </div>
           <div style="display:flex;gap:8px;margin-top:10px;">
-            <button class="btn btn-outline btn-sm" onclick="startJigAddCamera()">カメラ起動 (Bật Camera)</button>
-            <button class="btn btn-amber btn-sm" id="jig-capture-btn" onclick="captureJigAddPhoto()" style="display:none;">撮影 (Chụp)</button>
-            <button class="btn btn-outline btn-sm" onclick="document.getElementById('jig-file-input').click()">ファイル選択 (Chọn File)</button>
+            <button class="btn btn-outline btn-sm" onclick="startJigAddCamera()">カメラ起動</button>
+            <button class="btn btn-amber btn-sm" id="jig-capture-btn" onclick="captureJigAddPhoto()" style="display:none;">撮影</button>
+            <button class="btn btn-outline btn-sm" onclick="document.getElementById('jig-file-input').click()">ファイル選択</button>
             <input type="file" id="jig-file-input" accept="image/*" style="display:none;" onchange="handleJigFileSelect(event)"/>
           </div>
         </div>
 
         <!-- JIG Details -->
         <div class="card" style="margin-bottom:14px;">
-          <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:12px;">② JIG情報入力 (Nhập thông tin JIG)</p>
+          <p style="font-size:13px;font-weight:600;color:#374151;margin-bottom:12px;">② JIG情報入力</p>
           <div class="fg">
-            <label class="lbl">Tên JIG (JIG名) *</label>
-            <input class="inp" id="fj-name" type="text" placeholder="Ví dụ: JIG Test Rev1.0"/>
+            <label class="lbl">JIG名 *</label>
+            <input class="inp" id="fj-name" type="text" placeholder="例：検査用治具 A Rev1.0"/>
           </div>
           <div class="fg">
-            <label class="lbl">Số lượng JIG (JIG数量) *</label>
-            <input class="inp" id="fj-qty" type="number" min="1" placeholder="Ví dụ: 10"/>
+            <label class="lbl">JIG数量 *</label>
+            <input class="inp" id="fj-qty" type="number" min="1" placeholder="例：10"/>
           </div>
           <div class="fg">
-            <label class="lbl">Mô tả JIG (JIG説明) *</label>
-            <textarea class="inp" id="fj-desc" rows="3" style="resize:none;" placeholder="Mô tả công dụng hoặc thông số..."></textarea>
+            <label class="lbl">JIG説明 *</label>
+            <textarea class="inp" id="fj-desc" rows="3" style="resize:none;" placeholder="用途や仕様など..."></textarea>
           </div>
         </div>
 
-        <button class="btn btn-amber" onclick="submitJigAdd()">JIGを追加登録 (Thêm mới JIG)</button>
+        <button class="btn btn-amber" onclick="submitJigAdd()">JIGを追加登録</button>
       </div>
 
-      <!-- ── JIG INSPECTION (Kiểm tra định kỳ) ── -->
+      <!-- ── JIG INSPECTION ── -->
       <div id="page-jig-inspect" class="page hidden">
-        <h2 class="pg-title">JIG定期点検 (Kiểm tra JIG định kỳ)</h2>
-        <p style="font-size:13px;color:#6b7280;margin-bottom:14px;">Chọn JIG từ danh sách bên dưới để tiến hành kiểm tra định kỳ.</p>
+        <h2 class="pg-title">JIG定期点検</h2>
+        <p style="font-size:13px;color:#6b7280;margin-bottom:14px;">定期点検を行うJIGを一覧から選択してください。</p>
         
         <div class="search-wrap">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/></svg>
-          <input class="search-inp" id="jig-inspect-q" type="text" placeholder="Tìm kiếm theo tên JIG..." oninput="filterJigInspectList()"/>
+          <input class="search-inp" id="jig-inspect-q" type="text" placeholder="JIG名で検索..." oninput="filterJigInspectList()"/>
         </div>
 
         <div id="jig-inspect-content" style="display:flex;flex-direction:column;gap:8px;"></div>
@@ -458,22 +458,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
   </div>
 </div>
 
-<!-- JIG Inspect Modal (Kiểm tra JIG) -->
+<!-- JIG Inspect Modal -->
 <div class="modal-bg" id="jig-inspect-modal">
   <div class="modal" style="max-width: 480px;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-      <h3 class="modal-title" style="margin:0;">Kiểm tra định kỳ: <span id="jim-title" style="color:#d97706;"></span></h3>
+      <h3 class="modal-title" style="margin:0;">定期点検: <span id="jim-title" style="color:#d97706;"></span></h3>
       <button onclick="closeJigInspectModal()" style="background:none;border:none;cursor:pointer;font-size:20px;color:#6b7280;line-height:1;">&#215;</button>
     </div>
 
     <!-- Camera / File for inspect photo -->
     <div class="card" style="margin-bottom:14px; background:#f9fafb;">
-      <p style="font-size:12px;font-weight:600;color:#374151;margin-bottom:8px;">Chụp ảnh kiểm tra JIG (JIG確認用の撮影) *</p>
+      <p style="font-size:12px;font-weight:600;color:#374151;margin-bottom:8px;">JIG確認用写真撮影 *</p>
       <div class="cam-wrap">
         <div id="cam-jig-inspect" style="border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;max-width:320px;margin:0 auto;"></div>
         <div class="cam-overlay" id="cam-jig-inspect-overlay">
           <svg fill="none" stroke="#fff" viewBox="0 0 24 24" style="width:40px;height:40px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-          <span style="color:#fff;font-size:12px;font-weight:600;">撮影完了 (Đã chụp)</span>
+          <span style="color:#fff;font-size:12px;font-weight:600;">撮影完了</span>
         </div>
       </div>
       <div id="jig-inspect-preview" style="display:none;max-width:320px;margin:10px auto;border-radius:10px;overflow:hidden;border:1px solid #e5e7eb;">
@@ -481,7 +481,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
       </div>
       <div style="display:flex;gap:6px;margin-top:10px;justify-content:center;">
         <button class="btn btn-outline btn-sm" onclick="startJigInspectCamera()">カメラ起動</button>
-        <button class="btn btn-amber btn-sm" id="jig-inspect-capture-btn" onclick="captureJigInspectPhoto()" style="display:none;">撮影</button>
+        <button class="btn btn-amber btn-sm" id="jig-inspect-capture-btn" onclick="captureJigInspectPhoto()">撮影</button>
         <button class="btn btn-outline btn-sm" onclick="document.getElementById('jig-inspect-file-input').click()">ファイル選択</button>
         <input type="file" id="jig-inspect-file-input" accept="image/*" style="display:none;" onchange="handleJigInspectFileSelect(event)"/>
       </div>
@@ -489,21 +489,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 
     <!-- Status selection -->
     <div class="fg">
-      <label class="lbl">Tình trạng JIG (状態) *</label>
+      <label class="lbl">JIG状態 *</label>
       <select class="sel" id="jim-status" onchange="toggleJigMissingField()">
-        <option value="FULL">Đủ JIG (満数/異常なし)</option>
-        <option value="MISSING">Thiếu JIG (個数不足/異常あり)</option>
+        <option value="FULL">異常なし (満数)</option>
+        <option value="MISSING">異常あり (個数不足など)</option>
       </select>
     </div>
 
     <!-- Missing detail input -->
     <div class="fg" id="jim-missing-detail-wrap" style="display:none;">
-      <label class="lbl" style="color:#dc2626;">Chi tiết thiếu / Lý do (不足数または異常理由) *</label>
-      <input class="inp" id="jim-missing-detail" type="text" placeholder="Ví dụ: Thiếu 2 cái, bị gãy chốt..."/>
+      <label class="lbl" style="color:#dc2626;">不足状況・異常理由 *</label>
+      <input class="inp" id="jim-missing-detail" type="text" placeholder="例：2個不足、ピン破損など..."/>
     </div>
 
     <div style="display:flex;gap:8px;margin-top:16px;">
-      <button class="btn btn-green" onclick="submitJigInspection()">点検を確定 (Cập nhật)</button>
+      <button class="btn btn-green" onclick="submitJigInspection()">点検内容を確定</button>
       <button class="btn btn-outline" onclick="closeJigInspectModal()">キャンセル</button>
     </div>
   </div>
@@ -678,7 +678,7 @@ async function doLogin(){
       if (errBody.detail) msg = errBody.detail;
     } catch(_) {
       if (e.message.includes("接続できません") || e.message.includes("Failed to fetch") || e.message.includes("NetworkError")) {
-        msg = "サーバーに接続できません。\nAPI의 URL이 올바른지 확인해 주세요.\n現在: " + API;
+        msg = "サーバーに接続できません。\nAPIのURLが正しいか確認してください。\n現在: " + API;
       }
     }
     document.getElementById("login-err").style.display="";
@@ -996,7 +996,7 @@ async function fetchItemByCode(code){
 }
 
 /* ─────────────────────────────────────
-   JIG NEW ADD (Thêm JIG mới - Admin)
+   JIG NEW ADD (Admin Only)
 ───────────────────────────────────── */
 function initJigAddPage(){
   _jigAddBlob=null;
@@ -1058,7 +1058,7 @@ async function submitJigAdd(){
   const qty =parseInt(document.getElementById("fj-qty").value);
   const desc=document.getElementById("fj-desc").value.trim();
 
-  if(!name||isNaN(qty)||qty<1||!desc){ toast("Vui lòng nhập đầy đủ các trường thông tin bắt buộc!"); return; }
+  if(!name||isNaN(qty)||qty<1||!desc){ toast("必須項目をすべて入力してください"); return; }
 
   let photoUrl="";
   if(_jigAddBlob){
@@ -1067,22 +1067,22 @@ async function submitJigAdd(){
       fd.append("file",_jigAddBlob,"jig_photo.jpg");
       const r=await apiUpload("/upload/photo",fd);
       photoUrl=r.url||"";
-    }catch(e){ toast("Tải ảnh JIG thất bại, tiếp tục đăng ký..."); }
+    }catch(e){ toast("JIG写真のアップロードに失敗しました。登録は継続します。"); }
   }
 
   const body={ name, qty, desc, photo_url:photoUrl, operator:_userName };
 
   try{
     await api("/jigs/",{method:"POST",body:JSON.stringify(body)});
-    toast("Đăng ký thành công JIG mới: "+name);
+    toast("JIGを新規登録しました: "+name);
     initJigAddPage();
     document.getElementById("cam-jig-add").innerHTML="";
     go("jig-inspect");
-  }catch(e){ toast("Đăng ký JIG lỗi: "+e.message); }
+  }catch(e){ toast("JIGの登録に失敗しました: "+e.message); }
 }
 
 /* ─────────────────────────────────────
-   JIG PERIODIC INSPECTION (Kiểm tra định kỳ)
+   JIG PERIODIC INSPECTION
 ───────────────────────────────────── */
 async function loadJigInspectPage(){
   try{
@@ -1101,7 +1101,7 @@ function filterJigInspectList(){
 
 function renderJigInspectList(jigs){
   const container=document.getElementById("jig-inspect-content");
-  if(!jigs?.length){ container.innerHTML=emptyMsg("Không có JIG nào khả dụng"); return; }
+  if(!jigs?.length){ container.innerHTML=`<p style="color:#9ca3af;font-size:13px;text-align:center;padding:20px;">該当するJIGがありません</p>`; return; }
 
   container.innerHTML=jigs.map(j=>`
     <div class="item-card" onclick="openJigInspectModal(${JSON.stringify(j).replace(/"/g,"&quot;")})">
@@ -1110,11 +1110,11 @@ function renderJigInspectList(jigs){
         : `<div class="item-thumb no-img"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg></div>`}
       <div class="item-info">
         <div class="item-name">${esc(j.name)}</div>
-        <div class="item-sub">Mô tả: ${esc(j.desc || "—")} | SL tổng: <strong>${j.qty}</strong></div>
-        <div class="item-meta">Người kiểm tra cuối: ${esc(j.last_inspector || "Chưa có")} | Ngày kiểm: ${fmtDate(j.last_inspected_at)}</div>
+        <div class="item-sub">説明: ${esc(j.desc || "—")} | 総数: <strong>${j.qty}</strong></div>
+        <div class="item-meta">最終点検者: ${esc(j.last_inspector || "なし")} | 点検日: ${fmtDate(j.last_inspected_at)}</div>
         <div style="margin-top:4px;">
           <span class="badge badge-${j.status==="MISSING"?"used":"ready"}">
-            ${j.status==="MISSING"?`Thiếu JIG (異常あり)`:`Đủ JIG (異常なし)`}
+            ${j.status==="MISSING"?`個数不足（異常あり）`:`異常なし`}
           </span>
           ${j.missing_detail ? `<span style="font-size:11px;color:#dc2626;margin-left:6px;">(${esc(j.missing_detail)})</span>` : ""}
         </div>
@@ -1162,7 +1162,7 @@ async function startJigInspectCamera(){
     video.style.cssText="width:100%;display:block;";
     container.appendChild(video);
     document.getElementById("jig-inspect-capture-btn").style.display="";
-  }catch(e){ toast("Bật camera thất bại: "+e.message); }
+  }catch(e){ toast("カメラ起動失敗: "+e.message); }
 }
 
 function captureJigInspectPhoto(){
@@ -1201,8 +1201,8 @@ async function submitJigInspection(){
   const status=document.getElementById("jim-status").value;
   const missingDetail=document.getElementById("jim-missing-detail").value.trim();
 
-  if(status==="MISSING" && !missingDetail){ toast("Vui lòng điền chi tiết tình trạng thiếu!"); return; }
-  if(!_jigInspectBlob){ toast("Vui lòng chụp ảnh JIG để xác nhận kiểm tra!"); return; }
+  if(status==="MISSING" && !missingDetail){ toast("不足数または異常理由を入力してください"); return; }
+  if(!_jigInspectBlob){ toast("点検確認用写真を撮影または選択してください"); return; }
 
   let photoUrl="";
   try{
@@ -1210,7 +1210,7 @@ async function submitJigInspection(){
     fd.append("file",_jigInspectBlob,"inspect_photo.jpg");
     const r=await apiUpload("/upload/photo",fd);
     photoUrl=r.url||"";
-  }catch(e){ toast("Tải ảnh kiểm tra thất bại, tiếp tục ghi nhận..."); }
+  }catch(e){ toast("点検写真のアップロードに失敗しました。点検記録は継続します。"); }
 
   const body={
     status,
@@ -1221,10 +1221,10 @@ async function submitJigInspection(){
 
   try{
     await api(`/jigs/${_selectedJig.id}/inspect`,{method:"POST",body:JSON.stringify(body)});
-    toast("Cập nhật kiểm tra JIG định kỳ thành công!");
+    toast("JIG定期点検を完了しました");
     closeJigInspectModal();
     loadJigInspectPage();
-  }catch(e){ toast("Cập nhật thất bại: "+e.message); }
+  }catch(e){ toast("点検の更新に失敗しました: "+e.message); }
 }
 
 /* ─────────────────────────────────────
