@@ -19,7 +19,8 @@ load_dotenv()
 from database import engine, SessionLocal
 import models
 from auth import hash_password
-from routers import auth, users, items, history, upload,jigs
+from routers import auth, users, items, history, upload
+from routers.jigs import router as jigs_router
 
 
 # ── テーブル作成 ──────────────────────────────────
