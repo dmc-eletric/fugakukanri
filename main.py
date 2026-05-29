@@ -20,7 +20,7 @@ from database import engine, SessionLocal
 import models
 from auth import hash_password
 from routers import auth, users, items, history, upload
-from routers.jigs import router as jigs_router
+from routers import jigs
 
 
 # ── テーブル作成 ──────────────────────────────────

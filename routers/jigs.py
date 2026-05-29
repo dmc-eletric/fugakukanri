@@ -34,13 +34,13 @@ class JigInspectIn(BaseModel):
 
 
 # 1. API lấy danh sách JIGs (GET /jigs)
-@router.get("/")
+@router.get("")
 def get_all_jigs(db: Session = Depends(get_db)):
     return db.query(models.Jig).order_by(models.Jig.created_at.desc()).all()
 
 
 # 2. API thêm mới JIG (POST /jigs)
-@router.post("/")
+@router.post("")
 def create_jig(payload: JigCreate, db: Session = Depends(get_db)):
     new_jig = models.Jig(
         name=payload.name,
