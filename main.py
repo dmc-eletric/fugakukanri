@@ -19,7 +19,7 @@ load_dotenv()
 from database import engine, SessionLocal
 import models
 from auth import hash_password
-from routers import auth, users, items, history, upload
+from routers import auth, users, items, history, upload,jigs
 
 
 # ── テーブル作成 ──────────────────────────────────
@@ -137,6 +137,7 @@ app.include_router(users.router)
 app.include_router(items.router)
 app.include_router(history.router)
 app.include_router(upload.router)
+app.include_router(jigs.router)
 
 # ローカルストレージ用 static ファイル配信
 uploads_path = Path("./uploads")
